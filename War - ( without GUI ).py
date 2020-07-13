@@ -97,7 +97,7 @@ for items in range(26):
 
 round_num = 1
 game_on = True
-War_bet = []
+War_bet = []       #we use this list to collect all the bets and whichever player wins the preceding round wins the whole bet
 Wars_on = False
 
 while game_on == True:
@@ -126,7 +126,7 @@ while game_on == True:
             player1.add_cards(cardp1)
             if Wars_on == True:
                 player1.add_cards(War_bet)
-                War_bet.clear()
+                War_bet.clear() # emptying the list to avoid duplication
                 Wars_on = False
 
         elif cardp1.intval < cardp2.intval:
@@ -135,7 +135,7 @@ while game_on == True:
             player2.add_cards(cardp2)
             if Wars_on == True:
                 player2.add_cards(War_bet)
-                War_bet.clear()
+                War_bet.clear() # emptying the list to avoid duplication
                 Wars_on = False
             
             
